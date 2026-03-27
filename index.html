@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lotería del Pueblo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>🎱 Lotería del Pueblo 🎱</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#section1">Sorteos</a></li>
+        <li><a href="#section2">Combinaciones repetidas</a></li>
+        <li><a href="#section3">Agregar combinación</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section id="section3">
+        <h2>➕ Agregar Nueva Combinación</h2>
+        <div class="form-container">
+          <form id="form-balota">
+            <div class="form-group">
+              <label>Balotas Principales (1-43):</label>
+              <div class="balotas-container">
+                <div class="balota-input">
+                  <input
+                    type="number"
+                    id="balota1"
+                    min="1"
+                    max="43"
+                    required
+                    placeholder="B1"
+                  />
+                </div>
+                <div class="balota-input">
+                  <input
+                    type="number"
+                    id="balota2"
+                    min="1"
+                    max="43"
+                    required
+                    placeholder="B2"
+                  />
+                </div>
+                <div class="balota-input">
+                  <input
+                    type="number"
+                    id="balota3"
+                    min="1"
+                    max="43"
+                    required
+                    placeholder="B3"
+                  />
+                </div>
+                <div class="balota-input">
+                  <input
+                    type="number"
+                    id="balota4"
+                    min="1"
+                    max="43"
+                    required
+                    placeholder="B4"
+                  />
+                </div>
+                <div class="balota-input">
+                  <input
+                    type="number"
+                    id="balota5"
+                    min="1"
+                    max="43"
+                    required
+                    placeholder="B5"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Super Balota (1-16):</label>
+              <div class="balotas-container">
+                <div class="balota-input super-balota-input">
+                  <input
+                    type="number"
+                    id="superBalota"
+                    min="1"
+                    max="16"
+                    required
+                    placeholder="SB"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Fecha del Sorteo:</label>
+              <input type="date" id="fechaSorteo" required />
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+              Agregar Combinación
+            </button>
+            <button type="button" id="btn-ejecutar-sin-formatear" class="btn btn-secondary" onclick="procesarBalotasSinFormatear()" style="margin-left:0.5rem;">
+              Ejecutar datos de sin formatear
+            </button>
+          </form>
+        </div>
+      </section>
+      <!-- Sección Sorteos -->
+      <section id="section1">
+        <h2>🎯 Sorteos Realizados</h2>
+        <div style="margin-bottom:0.5rem;">
+          <button id="btn-delete-all" class="btn btn-danger" onclick="deleteAllSorteos()">Eliminar todos los sorteos</button>
+        </div>
+        <div id="sorteos-table-container" class="table-container">
+          <!-- La tabla paginada se generará dinámicamente -->
+        </div>
+        <div id="sorteos-container" class="cards-container" style="margin-top:1rem;">
+          <!-- Las cards (opcional) se generarán dinámicamente -->
+        </div>
+      </section>
+
+      <!-- Sección Combinaciones Repetidas -->
+      <section id="section2">
+        <h2>🔄 Combinaciones Repetidas</h2>
+        <div id="repetidas-container" class="cards-container">
+          <!-- Las cards repetidas se generarán dinámicamente -->
+        </div>
+      </section>
+
+      <!-- Sección Repetidas idénticas (incluye super balota) -->
+      <section id="section4">
+        <h2>🔁 Repetidas Idénticas (incluye Super Balota)</h2>
+        <div id="repetidas-con-super-container" class="cards-container">
+          <!-- Las cards idénticas con super se generarán dinámicamente -->
+        </div>
+      </section>
+
+      <!-- Sección Agregar Combinación -->
+    </main>
+    <footer>
+      <p>&copy; 2024 Lotería del Pueblo. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

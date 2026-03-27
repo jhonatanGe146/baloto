@@ -1,0 +1,463 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-blue: #1976d2;
+    --secondary-blue: #2196f3;
+    --light-blue: #e3f2fd;
+    --success-green: #4caf50;
+    --light-green: #e8f5e9;
+    --white: #ffffff;
+    --text-dark: #263238;
+    --text-light: #546e7a;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --shadow-hover: rgba(0, 0, 0, 0.2);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e3f2fd 0%, #ffffff 50%, #e8f5e9 100%);
+    min-height: 100vh;
+    color: var(--text-dark);
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+    color: var(--white);
+    padding: 0.5rem;
+    text-align: center;
+    box-shadow: 0 4px 6px var(--shadow);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Navigation */
+nav {
+    background: var(--white);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--primary-blue);
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: var(--light-blue);
+    transform: translateY(-2px);
+}
+
+/* Main Content */
+main {
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+section {
+    background: var(--white);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px var(--shadow);
+}
+
+section h2 {
+    color: var(--primary-blue);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid var(--success-green);
+    padding-bottom: 0.5rem;
+}
+
+/* Formulario */
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.balotas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.balota-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.balota-input input {
+    padding: 0.75rem;
+    border: 2px solid var(--light-blue);
+    border-radius: 8px;
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.balota-input input:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
+}
+
+.super-balota-input input {
+    border-color: var(--success-green);
+    background: var(--light-green);
+}
+
+.super-balota-input input:focus {
+    border-color: var(--success-green);
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+
+.form-group input[type="date"] {
+    padding: 0.75rem;
+    border: 2px solid var(--light-blue);
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 300px;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px var(--shadow);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px var(--shadow-hover);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* Cards Container */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Card de Balota */
+.balota-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px var(--shadow);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.balota-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+}
+
+.balota-card.repetida::before {
+    background: linear-gradient(90deg, var(--success-green) 0%, #66bb6a 100%);
+}
+
+.balota-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px var(--shadow-hover);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.card-fecha {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+.btn-delete {
+    background: transparent;
+    border: none;
+    color: #f44336;
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.btn-delete:hover {
+    background: #ffebee;
+    transform: rotate(90deg);
+}
+
+.balotas-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+}
+
+.balota-numero {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--white);
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.3);
+}
+
+.balota-card.repetida .balota-numero {
+    background: linear-gradient(135deg, var(--success-green) 0%, #66bb6a 100%);
+    box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
+}
+
+.super-balota {
+    width: 60px;
+    height: 60px;
+    font-size: 1.4rem;
+    border: 3px solid var(--white);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
+    background: linear-gradient(135deg, var(--success-green) 0%, #66bb6a 100%);
+}
+
+.balota-separator {
+    font-size: 1.5rem;
+    color: var(--text-light);
+    font-weight: 300;
+}
+
+.card-status {
+    text-align: center;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.status-normal {
+    background: var(--light-blue);
+    color: var(--primary-blue);
+}
+
+.status-repetida {
+    background: var(--light-green);
+    color: var(--success-green);
+}
+
+/* Footer */
+footer {
+    background: var(--text-dark);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+}
+
+/* Mensaje vacío */
+.empty-message {
+    text-align: center;
+    padding: 3rem;
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .balotas-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 0 1rem;
+    }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.balota-card {
+    animation: fadeIn 0.5s ease;
+}
+
+/* Tabla de sorteos */
+.table-container {
+    margin-top: 1rem;
+}
+
+.sorteos-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.sorteos-table th, .sorteos-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #f0f0f0;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.sorteos-table thead th {
+    background: #fafafa;
+    color: var(--text-dark);
+    font-weight: 700;
+}
+
+.super-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #f44336; /* rojo */
+    color: #fff;
+    font-weight: 700;
+    box-shadow: 0 2px 6px rgba(244,67,54,0.25);
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #e53935 0%, #f44336 100%);
+    color: #fff;
+    border-radius: 8px;
+    padding: 0.6rem 1rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-delete-small {
+    background: transparent;
+    border: 1px solid #f44336;
+    color: #f44336;
+    padding: 0.35rem 0.6rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.pagination {
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+    margin-top: 0.75rem;
+}
+
+.pagination .page {
+    padding: 0.4rem 0.6rem;
+    border: 1px solid #e0e0e0;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.pagination .page[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pagination .page.active {
+    background: var(--primary-blue);
+    color: #fff;
+    border-color: var(--primary-blue);
+}
+
+.ellipsis {
+    padding: 0 0.4rem;
+    color: var(--text-light);
+}
