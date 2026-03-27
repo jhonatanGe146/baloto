@@ -1,5 +1,89 @@
 [
   {
+    "id": "1774623929402",
+    "balota_1": 3,
+    "balota_2": 9,
+    "balota_3": 13,
+    "balota_4": 14,
+    "balota_5": 19,
+    "super_balota": 16,
+    "fecha_sorteo": "2026-03-25",
+    "repetida": false,
+    "cantidad_repeticiones": 0
+  },
+  {
+    "id": "1774623956903",
+    "balota_1": 22,
+    "balota_2": 25,
+    "balota_3": 36,
+    "balota_4": 41,
+    "balota_5": 42,
+    "super_balota": 16,
+    "fecha_sorteo": "2026-03-25",
+    "repetida": false,
+    "cantidad_repeticiones": 0
+  },
+  {
+    "id": "1774623984121",
+    "balota_1": 25,
+    "balota_2": 33,
+    "balota_3": 37,
+    "balota_4": 39,
+    "balota_5": 41,
+    "super_balota": 11,
+    "fecha_sorteo": "2026-03-23",
+    "repetida": false,
+    "cantidad_repeticiones": 0
+  },
+  {
+    "id": "1774624009139",
+    "balota_1": 4,
+    "balota_2": 11,
+    "balota_3": 12,
+    "balota_4": 23,
+    "balota_5": 28,
+    "super_balota": 11,
+    "fecha_sorteo": "2026-03-23",
+    "repetida": false,
+    "cantidad_repeticiones": 0
+  },
+  {
+    "id": "1774624036569",
+    "balota_1": 7,
+    "balota_2": 10,
+    "balota_3": 21,
+    "balota_4": 32,
+    "balota_5": 33,
+    "super_balota": 2,
+    "fecha_sorteo": "2026-03-21",
+    "repetida": false,
+    "cantidad_repeticiones": 0
+  },
+  {
+    "id": "1774624062666",
+    "balota_1": 23,
+    "balota_2": 24,
+    "balota_3": 33,
+    "balota_4": 39,
+    "balota_5": 42,
+    "super_balota": 13,
+    "fecha_sorteo": "2026-03-21",
+    "repetida": false,
+    "cantidad_repeticiones": 0
+  },
+  {
+    "id": "1774624087323",
+    "balota_1": 18,
+    "balota_2": 20,
+    "balota_3": 21,
+    "balota_4": 29,
+    "balota_5": 35,
+    "super_balota": 11,
+    "fecha_sorteo": "2026-03-18",
+    "repetida": false,
+    "cantidad_repeticiones": 0
+  },
+  {
     "id": "1773782950954",
     "balota_1": 5,
     "balota_2": 11,
@@ -9,7 +93,9 @@
     "super_balota": 3,
     "fecha_sorteo": "2026-03-16",
     "repetida": false,
-    "cantidad_repeticiones": 0
+    "cantidad_repeticiones": 0,
+    "repetida_con_super": false,
+    "cantidad_repeticiones_con_super": 0
   },
   {
     "id": "1773782972266",
@@ -21,7 +107,9 @@
     "super_balota": 8,
     "fecha_sorteo": "2026-03-16",
     "repetida": false,
-    "cantidad_repeticiones": 0
+    "cantidad_repeticiones": 0,
+    "repetida_con_super": false,
+    "cantidad_repeticiones_con_super": 0
   },
   {
     "id": "1773783013016",
@@ -33,7 +121,9 @@
     "super_balota": 16,
     "fecha_sorteo": "2026-03-14",
     "repetida": false,
-    "cantidad_repeticiones": 0
+    "cantidad_repeticiones": 0,
+    "repetida_con_super": false,
+    "cantidad_repeticiones_con_super": 0
   },
   {
     "id": "1773783038285",
@@ -45,7 +135,9 @@
     "super_balota": 10,
     "fecha_sorteo": "2026-03-14",
     "repetida": false,
-    "cantidad_repeticiones": 0
+    "cantidad_repeticiones": 0,
+    "repetida_con_super": false,
+    "cantidad_repeticiones_con_super": 0
   },
   {
     "id": "1773783073085",
@@ -57,7 +149,9 @@
     "super_balota": 7,
     "fecha_sorteo": "2026-03-11",
     "repetida": false,
-    "cantidad_repeticiones": 0
+    "cantidad_repeticiones": 0,
+    "repetida_con_super": false,
+    "cantidad_repeticiones_con_super": 0
   },
   {
     "id": "1773783095514",
@@ -69,7 +163,9 @@
     "super_balota": 6,
     "fecha_sorteo": "2026-03-11",
     "repetida": false,
-    "cantidad_repeticiones": 0
+    "cantidad_repeticiones": 0,
+    "repetida_con_super": false,
+    "cantidad_repeticiones_con_super": 0
   },
   {
     "id": "1773783130880",
@@ -81,7 +177,23 @@
     "super_balota": 14,
     "fecha_sorteo": "2026-03-09",
     "repetida": false,
-    "cantidad_repeticiones": 0
+    "cantidad_repeticiones": 0,
+    "repetida_con_super": false,
+    "cantidad_repeticiones_con_super": 0
+  },
+  {
+    "id": "1773783153857",
+    "balota_1": 1,
+    "balota_2": 5,
+    "balota_3": 15,
+    "balota_4": 22,
+    "balota_5": 27,
+    "super_balota": 9,
+    "fecha_sorteo": "2026-03-09",
+    "repetida": false,
+    "cantidad_repeticiones": 0,
+    "repetida_con_super": false,
+    "cantidad_repeticiones_con_super": 0
   },
   {
     "id": "1773065546928",
@@ -15400,14 +15512,14 @@
     "cantidad_repeticiones_con_super": 0
   },
   {
-    "id": "1773783153857",
-    "balota_1": 1,
-    "balota_2": 5,
-    "balota_3": 15,
-    "balota_4": 22,
-    "balota_5": 27,
-    "super_balota": 9,
-    "fecha_sorteo": "2026-03-09",
+    "id": "1774624114967",
+    "balota_1": 4,
+    "balota_2": 8,
+    "balota_3": 14,
+    "balota_4": 17,
+    "balota_5": 18,
+    "super_balota": 12,
+    "fecha_sorteo": "2026-03-18",
     "repetida": false,
     "cantidad_repeticiones": 0
   }

@@ -5,23 +5,26 @@ const DATA_FILE = path.join(__dirname, '..', 'balotas.json');
 const NUM_BALLS = 43;
 const PICK = 5;
 
-// Números más frecuentes según análisis histórico
-const NUMEROS_CALIENTES = [9, 5, 43, 32, 21, 33, 12, 26, 4, 42, 25, 39, 22, 13, 35];
+// Números más frecuentes según análisis histórico (actualizado 2026-03)
+// Combinación de top histórico + tendencia reciente (últimos 20 sorteos)
+const NUMEROS_CALIENTES = [21, 23, 9, 11, 33, 5, 43, 32, 12, 26, 4, 42, 25, 39, 22, 13, 35];
 
 // Pares que frecuentemente salen juntos
 const PARES_CALIENTES = [
   [18, 40], [26, 27], [9, 21], [8, 30], [16, 26], [14, 28], [9, 39],
-  [7, 33], [33, 43], [13, 43], [27, 42], [12, 32]
+  [7, 33], [33, 43], [13, 43], [27, 42], [12, 32], [21, 23], [11, 33]
 ];
 
 // Configuración de reglas basadas en análisis de patrones
+// Actualizado 2026-03: rango de suma ampliado y paridad flexibilizada
+// según análisis de los últimos 20 sorteos donde el 60% caía fuera del rango anterior
 const REGLAS = {
   maxConsecutivos: 2,  // máximo 2 números consecutivos (no toda la serie)
-  minPares: 2,         // mínimo números pares
-  maxPares: 3,         // máximo números pares
-  sumaMin: 86,         // suma mínima de la combinación
-  sumaMax: 136,        // suma máxima de la combinación
-  distribucionRangos: true, // al menos 1 número de cada rango
+  minPares: 1,         // mínimo números pares (antes: 2, pero 1-4 aparece 25% reciente)
+  maxPares: 4,         // máximo números pares (antes: 3)
+  sumaMin: 50,         // suma mínima (antes: 86 — demasiado restrictivo)
+  sumaMax: 175,        // suma máxima (antes: 136 — demasiado restrictivo)
+  distribucionRangos: false, // desactivado: patrones 3-2-0 y 0-2-3 son los más comunes ahora
 };
 
 function tupleKey(arr) {
